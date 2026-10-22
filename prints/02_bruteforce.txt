@@ -1,0 +1,2 @@
+$ python3 /mnt/c/Users/erick/Downloads/defops/repos/incident-response-theory/scripts/detecta_bruteforce.py
+[ALERTA] Possivel forca bruta: 192.168.0.10 (4 falhas)
