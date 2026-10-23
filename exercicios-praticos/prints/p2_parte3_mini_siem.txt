@@ -1,0 +1,14 @@
+$ /opt/vol3/bin/python /mnt/c/Users/erick/Downloads/defops/repos/incident-response-theory/exercicios-praticos/p2_parte3/mini_siem_completo.py
+=== Mini-SIEM - Ranking de risco (ultimos 5 min) ===
+1. IP: 10.0.0.5       Score: 16  Severidade: CRITICO
+   [ACAO] Firewall: IP 10.0.0.5 bloqueado automaticamente.
+2. IP: 192.168.1.10   Score: 2   Severidade: MEDIO
+
+Relatorio CSV exportado em: ../../../mnt/c/Users/erick/Downloads/defops/repos/incident-response-theory/exercicios-praticos/prints/mini_siem_relatorio.csv
+
+--- Respostas ---
+Maior risco: 10.0.0.5 (score 16 = 2xLOGIN_FAIL(6) + MALWARE(10); ALLOW pesa 0) -> CRITICO.
+E um INCIDENTE: multiplas fontes (firewall+auth+AV) convergem no mesmo IP.
+Multiplas fontes aumentam a severidade porque reduzem falso positivo (correlacao).
+Um unico malware ja justifica severidade alta, mas a correlacao eleva a CRITICO.
+Acao: bloquear o IP e ISOLAR a maquina; 172.16.0.8 foi ignorado (allowlist=falso positivo).

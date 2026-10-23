@@ -1,0 +1,25 @@
+$ PY=/opt/vol3/bin/python; for f in /mnt/c/Users/erick/Downloads/defops/repos/incident-response-theory/exercicios-praticos/p1_parte8/ex1* /mnt/c/Users/erick/Downloads/defops/repos/incident-response-theory/exercicios-praticos/p1_parte8/ex2* /mnt/c/Users/erick/Downloads/defops/repos/incident-response-theory/exercicios-praticos/p1_parte8/ex3* /mnt/c/Users/erick/Downloads/defops/repos/incident-response-theory/exercicios-praticos/p1_parte8/ex4* /mnt/c/Users/erick/Downloads/defops/repos/incident-response-theory/exercicios-praticos/p1_parte8/ex6*; do echo "$ python3 $(basename $f)"; $PY "$f"; echo; done
+$ python3 ex1_ler_log_real.py
+[ALERTA] Forca bruta detectada: 192.168.0.10 (6 tentativas)
+
+$ python3 ex2_pandas.py
+IPs mais suspeitos (por nº de login_fail):
+ip
+192.168.0.10    5
+203.0.113.7     2
+172.16.0.5      1
+
+$ python3 ex3_severidade.py
+phishing         -> MEDIO
+login_fail       -> BAIXO
+ransomware       -> CRITICO
+vazamento_dados  -> ALTO
+
+$ python3 ex4_alerta_siem.py
+[ALERTA SOC] Possivel ataque de forca bruta detectado (12 tentativas)
+
+$ python3 ex6_relatorio.py
+Relatorio gerado em: ../../../mnt/c/Users/erick/Downloads/defops/repos/incident-response-theory/exercicios-praticos/prints/relatorio.txt
+phishing - MEDIO
+ransomware - CRITICO
+

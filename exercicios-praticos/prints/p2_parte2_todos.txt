@@ -1,0 +1,15 @@
+$ PY=/opt/vol3/bin/python; for f in /mnt/c/Users/erick/Downloads/defops/repos/incident-response-theory/exercicios-praticos/p2_parte2/ex*.py; do echo "$ python3 $(basename $f)"; $PY "$f"; echo; done
+$ python3 ex1_login_suspeito.py
+Possivel ataque de forca bruta: 192.168.0.10 (3 falhas)
+
+$ python3 ex2_arquivos_suspeitos.py
+Arquivo suspeito detectado: sistema.exe (hash zzz999 nao esta na allowlist)
+
+$ python3 ex3_alerta_ransomware.py
+ALERTA: Arquivo criptografado detectado
+Acao registrada: isolar a maquina da rede (contencao)
+--- Avaliacao ---
+Decisao foi CONTENCAO (isolar) -> correto: preserva evidencia e para a propagacao.
+Notificar: SOC/CSIRT, gestor de TI, juridico/DPO (LGPD), comunicacao.
+Desligar? NAO 'hard power-off' - isolar da rede mantendo ligado preserva memoria/chaves.
+

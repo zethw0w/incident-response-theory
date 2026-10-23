@@ -1,0 +1,20 @@
+$ PY=/opt/vol3/bin/python; for f in /mnt/c/Users/erick/Downloads/defops/repos/incident-response-theory/exercicios-praticos/p1_parte7/ex*.py; do echo "$ python3 $(basename $f)"; $PY "$f"; echo; done
+$ python3 ex1_bruteforce.py
+ALERTA: Possivel forca bruta do IP 192.168.0.10 (4 falhas)
+
+$ python3 ex2_malware_extensao.py
+Arquivos suspeitos encontrados:
+ - invoice.exe
+ - atualizacao.scr
+ - notasfiap.bat
+
+$ python3 ex3_vazamento.py
+Possivel vazamento: {'usuario': 'maria', 'arquivo': 'financeiro.xlsx', 'origem': 'externa'}
+
+$ python3 ex4_metricas_mttd_mttr.py
+MTTD (Mean Time To Detect):  2.00 h
+MTTR (Mean Time To Respond): 6.00 h
+
+$ python3 ex5_resposta_automatizada.py
+Firewall: IP 192.168.0.10 bloqueado com sucesso.
+
